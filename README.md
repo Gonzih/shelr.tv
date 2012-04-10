@@ -16,12 +16,6 @@ Ruby 1.9.2+ required.
     bundle exec rake db:seed
     bundle exec foreman start
 
-# Running on Heroku
-    heroku create
-    rm Procfile
-    git ci -a -m 'rm Procfile'
-
-
 # Contributions welcome!
 
 - fork
