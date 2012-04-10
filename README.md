@@ -16,6 +16,22 @@ Ruby 1.9.2+ required.
     bundle exec rake db:seed
     bundle exec foreman start
 
+# Running on Heroku
+    heroku create
+    git co -b heroku
+    git rm Procfile
+    git ci -m 'rm Procfile'
+    cp config/config.yml.samlpe config/config.yml
+    # Edit new config.yml with your values.
+    git add -f config/config.yml
+    git ci -m 'add config.yml'
+    rake assets:precompile
+    git add public/assets
+    git ci -m 'add assets'
+    git push heroku heroku:master
+    heroku rake db:seed
+
+
 # Contributions welcome!
 
 - fork
